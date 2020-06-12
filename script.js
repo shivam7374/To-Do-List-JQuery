@@ -35,16 +35,35 @@ function sorttasks()
 {
     $('#ulTasks .done').appendTo(ulTasks)
 }
+
+
+function toggleInputBtns(valisempty){
+    if(valisempty)
+    {
+        btnReset.prop('disabled',false)
+        btnAdd.prop('disabled',false)
+    } 
+    else 
+    {
+        btnReset.prop('disabled',true)
+        btnAdd.prop('disabled',true)
+    }
+}
+
+inpNewTask.on('input',()=>{
+    toggleInputBtns(inpNewTask.val()!='')
+})
+
 btnAdd.click(()=>{
     addItem()
 })
 btnReset.click(()=>{
     inpNewTask.val('')
+    toggleInputBtns(false)
 })
 btnCleanup.click(()=>{
     cleardone()
 })
-
 btnSort.click(()=>{
     sorttasks()
 })
