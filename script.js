@@ -1,6 +1,7 @@
 let ulTasks=$('#ulTasks')
 let btnAdd=$('#btnAdd')
-let btnClear=$('#btnClear')
+let btnReset=$('#btnReset')
+let btnCleanup=$('#btnCleanup')
 let inpNewTask=$('#inpNewTask')
 
 function addItem(){
@@ -24,6 +25,16 @@ inpNewTask.keypress((e)=>{
         addItem()
     }
 })
+function cleardone()
+{
+    $('#ulTasks .done').remove()
+}
 btnAdd.click(()=>{
     addItem()
+})
+btnReset.click(()=>{
+    inpNewTask.val('')
+})
+btnCleanup.click(()=>{
+    cleardone()
 })

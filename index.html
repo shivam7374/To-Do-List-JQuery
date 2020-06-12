@@ -34,7 +34,7 @@
         <h1 align="center">TO-DO LIST</h1>
         <div class="row">
         <!-- Input Box -->
-        <div class="col-md-8">
+        <div class="col-md-7">
               <!-- md here makes it col-8 upto medium screen size -->
                 <div class="form-group">
                     <label for="inpNewTask">New Task</label>
@@ -44,23 +44,28 @@
             </div>
 
         <!-- Buttons -->
-            <div class="col-md-4">
-                <div class="row">
-                    <button class="btn btn-success col m-2" id="btnAdd">
+            <div class="col-md-5 row">
+                <div class="col-sm-3 col-md-6 p-1">
+                    <button class="btn btn-success col" id="btnAdd">
                         <i class="fa fa-plus"></i>    Add 
                     </button>
-                    <button class="btn btn-danger col m-2" id="btnReset">
+                </div>
+                <div class="col-sm-3 col-md-6 p-1">
+                    <button class="btn btn-danger col" id="btnReset">
                         <i class="fa fa-backspace"></i>    Reset
                     </button>
                 </div>
-                <div class="row">
-                    <button class="btn btn-info col m-2" id="btnSort">
+                <div class="col-sm-3 col-md-6 p-1">
+                    <button class="btn btn-info col" id="btnSort">
                         <i class="fa fa-sort-amount-down"></i>    Sort 
                     </button>
-                    <button class="btn btn-warning col m-2" id="btnClear">
+                </div>
+                <div class="col-sm-3 col-md-6 p-1">
+                    <button class="btn btn-warning col" id="btnCleanup">
                         <i class="fa fa-trash-alt"></i>    Cleanup
                     </button>
                 </div>
+                
             </div>
         </div>
         <!-- Task List  -->
