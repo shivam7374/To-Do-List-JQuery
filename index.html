@@ -24,7 +24,8 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
     crossorigin="anonymous">
     </script>
-    <script src="./script.js"></script>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     
@@ -34,28 +35,24 @@
         <div class="row">
             <div class="col">
                 <div class="form-group">
-                    <label for="newTask">New Task</label>
-                    <input type="text" class="form-control" id="newTask" aria-describedby="newTaskHelp" placeholder="Enter a new task">
+                    <label for="inpNewTask">New Task</label>
+                    <input type="text" class="form-control" id="inpNewTask" aria-describedby="newTaskHelp" placeholder="Enter a new task">
                     <small id="newTaskHelp" class="form-text text-muted">A short description of your task.</small>
                 </div>
             </div>
         </div>
         <!-- Buttons -->
         <div class="row px-4">
-            <button class="btn btn-success col m-2">
+            <button class="btn btn-success col m-2" id="btnAdd">
                 Add
             </button>
-            <button class="btn btn-danger col m-2">
+            <button class="btn btn-danger col m-2" id="btnClear">
                 Clear
             </button>
         </div>
         <!-- Task List  -->
-        <ul class="m-2 row list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+        <ul class="m-2 row list-group" id="ulTasks">
+            
         </ul>
     </div>
 
