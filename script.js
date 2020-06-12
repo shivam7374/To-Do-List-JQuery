@@ -3,7 +3,7 @@ let btnAdd=$('#btnAdd')
 let btnClear=$('#btnClear')
 let inpNewTask=$('#inpNewTask')
 
-btnAdd.click(()=>{
+function addItem(){
     let listItem=$('<li>',{
         'class':'list-group-item',
         text:inpNewTask.val()
@@ -17,4 +17,13 @@ btnAdd.click(()=>{
 
     console.log(inpNewTask.val())
     inpNewTask.val('')
+}
+inpNewTask.keypress((e)=>{
+    if(e.which==13)// 13 is the keywhich value for enter
+    {
+        addItem()
+    }
+})
+btnAdd.click(()=>{
+    addItem()
 })
